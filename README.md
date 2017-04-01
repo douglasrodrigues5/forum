@@ -1,24 +1,16 @@
-# README
+#Forum
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app just save your personal contacts.
 
-Things you may want to cover:
+* ***POSTGRESQL REQUIRED***
 
-* Ruby version
+How to use: 
 
-* System dependencies
+```bash
+	git clone git@github.com:douglasrodrigues5/forum.git
+	cd forum
+	bundle install
+	rails s
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![site] (http://i.imgur.com/TqxlP7D.png)
