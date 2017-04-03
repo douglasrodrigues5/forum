@@ -4,7 +4,7 @@ This app just save your personal contacts.
 
 * ***POSTGRESQL REQUIRED***
 
-How to use: 
+How to use:
 
 ```bash
 	git clone git@github.com:douglasrodrigues5/forum.git
@@ -14,3 +14,5 @@ How to use:
 ```
 
 ![site](http://i.imgur.com/TqxlP7D.png)
+![postindex](http://i.imgur.com/fCWSKOY.png)
+![postedit](http://i.imgur.com/W3mHRlo.png)
