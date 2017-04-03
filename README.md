@@ -1,5 +1,5 @@
-#Forum
-
+Forum
+=====
 This app just save your personal contacts.
 
 * ***POSTGRESQL REQUIRED***
@@ -13,4 +13,4 @@ How to use:
 	rails s
 ```
 
-![site] (http://i.imgur.com/TqxlP7D.png)
+![site](http://i.imgur.com/TqxlP7D.png)
