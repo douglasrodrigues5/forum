@@ -14,6 +14,64 @@
   <strong>Person:</strong>
   <%= @post.person.name %>
 </p>
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <% if(comment[:parent_id] == nil)%>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+  <% i = 0 %>
+  <% last_id = 0 %>
+  <% pixels = 10; %>
+  <% @post.comments.each do |cmt| %>
+    <% if(cmt[:parent_id] == comment[:id]) %>
+          <% i+=1 %>
+          <% i.times do |i| %>
+            <% if(cmt[:id] != last_id) %>
+                <% last_id = cmt[:id] %>
+                <div style="margin-left:20px" class="reply">
+                <p>
+                  <strong>Commenter:</strong>
+                  <%= cmt.commenter %>
+                </p>
+
+                <p>
+                  <strong>Comment:</strong>
+                  <%= cmt.body %>
+                </p>
+              </div>
+            <% end %>
+          <% end %>
+    <% end %>
+
+  <% end %>
+  <% end %>
+
+<% end %>
+<h2>Add a comment:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :parent_id %><br>
+    <%= f.number_field :parent_id %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
