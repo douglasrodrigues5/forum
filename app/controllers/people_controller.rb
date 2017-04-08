@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
+    @posts = Post.all
   end
 
   # GET /people/1

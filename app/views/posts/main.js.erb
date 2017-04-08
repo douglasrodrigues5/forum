@@ -1,0 +1,9 @@
+$(document).ready(function() {
+  $('.btnReply').click(function (event) {
+    alert('Hooray!');
+    event.preventDefault(); // Prevent link from following its hremf
+    $('#replies').append("<%= j render(:partial => 'posts/form') %>");
+
+  });
+
+});

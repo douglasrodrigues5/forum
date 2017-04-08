@@ -42,15 +42,6 @@ ActiveRecord::Schema.define(version: 20170404191541) do
     t.index ["person_id"], name: "index_posts_on_person_id", using: :btree
   end
 
-  create_table "replies", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "comment_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["comment_id"], name: "index_replies_on_comment_id", using: :btree
-  end
-
   add_foreign_key "comments", "posts"
   add_foreign_key "posts", "people"
-  add_foreign_key "replies", "comments"
 end
