@@ -1,4 +1,4 @@
 class Person < ApplicationRecord
   validates :name,:age,:address, presence: true
-  has_many :posts
+  has_many :posts, dependent: :nullify
 end
