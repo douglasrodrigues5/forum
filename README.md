@@ -16,3 +16,4 @@ How to use:
 ![site](http://i.imgur.com/TqxlP7D.png)
 ![postindex](http://i.imgur.com/fCWSKOY.png)
 ![postedit](http://i.imgur.com/W3mHRlo.png)
+![comments](http://i.imgur.com/xO3dM0L.png)
