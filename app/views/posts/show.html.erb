@@ -60,7 +60,7 @@
   <%= form_for([@post, @post.comments.new]) do |f| %>
     <p>
       <%= f.label :commenter %><br>
-      <%= f.file_field :commenter %>
+      <%= f.text_field :commenter %>
     </p>
     <p>
       <%= f.label :body %><br>
