@@ -1,6 +1,7 @@
 Forum
 =====
 This app just save your personal contacts.
+[![Build Status](https://travis-ci.org/douglasrodrigues5/forum.svg?branch=master)](https://travis-ci.org/douglasrodrigues5/forum)
 
 * ***POSTGRESQL REQUIRED***
 
