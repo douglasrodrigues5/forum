@@ -14,7 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$.get( "ajax/test.html", function( data ) {
-  $( ".result" ).html( data );
-  alert( "Load was performed." );
-});
+//= require tether
+//= require bootstrap-sprockets
