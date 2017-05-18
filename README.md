@@ -1,8 +1,10 @@
 Forum
 =====
-This app just save your personal contacts.
+This is a forum app inspired by threads fóruns.
+
 [![Build Status](https://travis-ci.org/douglasrodrigues5/forum.svg?branch=master)](https://travis-ci.org/douglasrodrigues5/forum)
 
+[See me on heroku](http://forum-thread-board.herokuapp.com)
 * ***POSTGRESQL REQUIRED***
 
 How to use:
@@ -14,7 +16,5 @@ How to use:
 	rails s
 ```
 
-![site](http://i.imgur.com/TqxlP7D.png)
-![postindex](http://i.imgur.com/fCWSKOY.png)
-![postedit](http://i.imgur.com/W3mHRlo.png)
-![comments](http://i.imgur.com/xO3dM0L.png)
+![site](http://i.imgur.com/U1puikq.png)
+
