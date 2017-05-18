@@ -1,7 +1,9 @@
 
 .main-form{
+  background: no-repeat;
   background-image: url(<%= asset_path 'sidebar_bg.jpg' %>);
-  background-size: 100%;
+  background-size: auto 100%;
+  color: rgb(236, 236, 236);
 }
 
 .post-form{
@@ -25,4 +27,29 @@ margin-top: 60px;
     height:100%;
     min-height:100%;
 
+}
+.input-field, .input-field:focus{
+  border-radius: 0;
+  border: 1.5px solid rgb(227, 227, 227);
+  background-color: rgba(42, 42, 42, 0.55);
+  color: #fff !important;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 400;
+}
+
+.header-text{
+  margin-top: 10%;
+  font-size: 2em;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 300;
+}
+.navbar-inverse{
+  background-color: rgb(20, 19, 13) !important;
+}
+form{
+  margin-top: 30px;
+}
+.header-sub{
+  color: rgba(217, 217, 217, 0.74);
+  font-weight: 300;
 }
