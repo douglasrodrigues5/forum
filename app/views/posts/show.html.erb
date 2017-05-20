@@ -13,7 +13,7 @@
 
 <p>
   <strong>Person:</strong>
-  <%= @post.person.name %>
+  <%= @post.user.email %>
 </p>
 <h2>Comments</h2>
 
@@ -95,5 +95,8 @@
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<% if current_user.id == @post.user.id %>
+<td><%= link_to 'Edit', edit_post_path(@post) %></td>
+|
+<% end %>
 <%= link_to 'Back', posts_path %>

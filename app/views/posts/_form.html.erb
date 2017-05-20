@@ -1,36 +1,16 @@
-<%= form_for(post) do |f| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<%= form_for(current_user.posts.build) do |f| %>
+<div class="field">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
 
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="field">
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+</div>
+<%= f.hidden_field :user_id, :value => current_user.id%>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= f.label :person_id %>
-    <%= f.select :person_id, {include_blank: true}, {class: "form-control" } do %>
-  <% Person.all.each do |person| %>
-    <%= content_tag(:option, person.name, {:value => person.id, :id => person.id}) %>
-  <% end %>
-<% end %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
