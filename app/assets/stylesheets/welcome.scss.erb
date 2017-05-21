@@ -1,4 +1,9 @@
-
+.container-fluid{
+  padding:0;
+}
+.row{
+  margin:0;
+}
 .main-form{
   background: no-repeat;
   background-image: url(<%= asset_path 'sidebar_bg.jpg' %>);
@@ -7,7 +12,6 @@
 }
 
 .post-form{
-margin-top: 60px;
         overflow-y: scroll;
 }
 ::-webkit-scrollbar {
@@ -52,4 +56,7 @@ form{
 .header-sub{
   color: rgba(217, 217, 217, 0.74);
   font-weight: 300;
+}
+.post-form{
+  background-color: #5cb85c;
 }
