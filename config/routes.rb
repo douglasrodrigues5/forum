@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'welcome/index'
-  resources :people
   resources :posts do
     resources :comments
   end

@@ -1,12 +1,8 @@
-
-<h1>Posts</h1>
-
     <% @posts.each do |post| %>
         <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 post">
-        <%= post.title %>
+        <h2 class="post<%= post.id %>"> <%= link_to post.title, post %> </h2> 
         <%= post.content %>
-        <%= post.user.email %>
-        <%= link_to 'Show', post %>
+        <p> Posted by: <strong><%= post.user.email %></strong></p>
         <% if user_signed_in? %>
         <% if current_user.id == post.user.id %>
         <%= link_to 'Edit', edit_post_path(post) %>
@@ -16,5 +12,4 @@
         </div>
     <% end %>
 
-    </div>
 <br>

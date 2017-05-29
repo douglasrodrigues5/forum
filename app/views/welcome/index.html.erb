@@ -11,17 +11,19 @@
     <p class="header-text">
       Want to post something? Just login or sign up. It's fast and fascinating.
     </p>
+    <div class="sidebarform">
     <%= render :template => 'devise/sessions/new' %>
+    </div>
     <p class="header-sub">
       Our members have the opportunity to share stories with each other. Forming a social cycle. Join us and turn your experience into the virtual world.
     </p>
     <span>
-      <%= link_to("Don't you have an account? Sign up.", new_user_registration_path)  %>
+      <%= link_to("Don't you have an account? Sign up.",new_user_registration_path , :class => "login")  %>
     </span>
     <% end %>
     </center>
   </div>
-  <div class="col-sm-12 col-md-8 col-lg-8 post-form">
+  <div class="col-sm-12 col-md-8 col-lg-8 post-sec">
 
     <%= render :template => "posts/index" %>
   </div>
