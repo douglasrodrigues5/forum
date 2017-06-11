@@ -1,16 +1,14 @@
 <%= form_for(current_user.posts.build) do |f| %>
 <div class="field">
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, autofocus: true, :placeholder => "Title", :class => "form-control input-field" %>
 </div>
 
 <div class="field">
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+  <%= f.text_area :content, :placeholder => "Your message", :class => "form-control input-field" %>
 </div>
 <%= f.hidden_field :user_id, :value => current_user.id%>
 
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit "Submit", :class => "button-login"  %>
 </div>
 <% end %>
